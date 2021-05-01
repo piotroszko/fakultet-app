@@ -5,37 +5,11 @@
     <h1>Aplikacja fakultet</h1>
   </div>
   <div class="postTable">
-    <button (click)="getPosts()" class="myButton">
+    <button (click)="studentsTable.getPosts()" class="myButton">
       Aktualizuj liste studentów
     </button>
-    <table class="students">
-      <thead style="display:table-header-group">
-        <tr>
-          <th>Imie</th>
-          <th>Nazwisko</th>
-          <th>Index</th>
-          <th>ID</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let post of posts | async">
-          <ng-container>
-            <td>
-              {{ post.name}}
-            </td>
-            <td>
-              {{ post.surname}}
-            </td>
-            <td>
-              {{ post.index}}
-            </td>
-            <td>
-              {{ post.id}}
-            </td>
-          </ng-container>
-        </tr>
-      </tbody>
-    </table>
+    <app-students-table #studentsTable [url]="ROOT_URL"></app-students-table>
+
     <!--<button (click)="createPost()" class="myButton">Dodaj studenta</button> -->
     <hr />
   </div>
