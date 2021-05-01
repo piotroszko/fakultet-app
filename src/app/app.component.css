@@ -1,0 +1,97 @@
+p {
+  font-family: Lato;
+}
+h1 {
+  color: white;
+}
+.students {
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.students thead th {
+  display: table-cell;
+}
+.students thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+.students th,
+.students td {
+  padding: 12px 15px;
+}
+.students tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+.students tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+.students tbody tr:nth-of-type(odd) {
+  background-color: #ececec;
+}
+
+.students tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+.myButton {
+  box-shadow: 0px 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #3f4b4f 5%, #408c99 100%);
+  background-color: #3f4b4f;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #408c99 5%, #3f4b4f 100%);
+  background-color: #408c99;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 8% 1fr 1fr 8%;
+  grid-template-rows: 5% 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "margineLeft pageTitle pageTitle margineRight"
+    "margineLeft postTable formsPost margineRight";
+  grid-gap: 15px;
+}
+
+.margineLeft {
+  grid-area: margineLeft;
+}
+
+.margineRight {
+  grid-area: margineRight;
+}
+
+.pageTitle {
+  grid-area: pageTitle;
+  text-align: center;
+}
+
+.postTable {
+  grid-area: postTable;
+}
+
+.formsPost {
+  grid-area: formsPost;
+}
