@@ -11,8 +11,6 @@ export class StudentsTableComponent implements OnInit {
   @Input()
   url: string;
 
-  readonly ROOT_URL = "https://uwm-gr1.azurewebsites.net/api/Student";
-
   posts: Observable<any>;
   newPost: Observable<any>;
 

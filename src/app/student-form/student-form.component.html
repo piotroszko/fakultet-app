@@ -1,0 +1,9 @@
+<div class="students-form">
+  <input type="text" placeholder="Imie" [(ngModel)]="formPost.name"/>
+  <input type="text" placeholder="Nazwisko" [(ngModel)]="formPost.surname"/>
+  <input type="text" placeholder="Index" [(ngModel)]="formPost.index"/>
+  <input type="text" placeholder="ID" [(ngModel)]="formPost.id"/>
+  <button class="myButton" (click)="createPost()">
+    Dodaj studenta
+  </button>
+</div>

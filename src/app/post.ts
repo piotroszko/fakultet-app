@@ -1,6 +1,6 @@
 export interface Post {
   id: string;
-  surname: string;
   name: string;
+  surname: string;
   index: string;
 }
