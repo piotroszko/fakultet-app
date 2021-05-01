@@ -26,14 +26,8 @@ export class StudentFormComponent implements OnInit {
       surname: this.formPost.surname,
       index: this.formPost.index
     };
-    const data2: Post = {
-      id: "3fa85f64-5717-4562-b3fc-2c963f66afa3",
-      name: "Ppppp",
-      surname: "Xxxxx",
-      index: "12121212"
-    };
     this.newPost = this.http
-      .post(this.url, data2)
+      .post(this.url, data)
       .retry(3)
       .catch(err => {
         console.log(err);
