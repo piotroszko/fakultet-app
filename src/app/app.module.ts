@@ -8,18 +8,25 @@ import { HelloComponent } from "./hello.component";
 import { StudentsTableComponent } from "./students-table/students-table.component";
 import { StudentFormComponent } from "./student-form/student-form.component";
 import { SideNavBarComponent } from "./side-nav-bar/side-nav-bar.component";
-import { MatSliderModule } from "@angular/material/slider";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSidenavModule
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
     StudentsTableComponent,
-    MatSliderModule,
-    StudentFormComponent,
-    SideNavBarComponent
+    StudentFormComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [MatSidenavModule]
 })
 export class AppModule {}

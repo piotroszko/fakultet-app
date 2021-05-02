@@ -1,17 +1,29 @@
-<div class="grid-container">
-  <div class="margineLeft"></div>
-  <div class="margineRight"></div>
-  <div class="pageTitle">
-    <h1>Aplikacja fakultet</h1>
-  </div>
-  <div class="postTable">
-    <button (click)="studentsTable.getPosts()" class="myButton">
+<mat-sidenav-container class="container">
+
+
+
+  <mat-sidenav #sidenav mode="side" position="start">
+    This is my content.
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button (click)="sidenav.toggle()" class="btn"><i class="fa fa-bars"></i></button>
+    <div class="grid-container">
+      <div class="margineLeft"></div>
+      <div class="margineRight"></div>
+      <div class="pageTitle">
+        <h1>Aplikacja fakultet</h1>
+      </div>
+      <div class="postTable">
+        <button (click)="studentsTable.getPosts()" class="myButton">
       Aktualizuj liste studentów
     </button>
-    <app-students-table #studentsTable [url]="ROOT_URL"></app-students-table>
-    <hr />
-  </div>
-  <div class="formsPost">
-    <app-student-form [url]="ROOT_URL"></app-student-form>
-  </div>
-</div>
+        <app-students-table #studentsTable [url]="ROOT_URL"></app-students-table>
+        <hr />
+      </div>
+      <div class="formsPost">
+        <app-student-form [url]="ROOT_URL"></app-student-form>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
