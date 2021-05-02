@@ -7,6 +7,8 @@ import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
 import { StudentsTableComponent } from "./students-table/students-table.component";
 import { StudentFormComponent } from "./student-form/student-form.component";
+import { SideNavBarComponent } from "./side-nav-bar/side-nav-bar.component";
+import { MatSliderModule } from "@angular/material/slider";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
@@ -14,7 +16,9 @@ import { StudentFormComponent } from "./student-form/student-form.component";
     AppComponent,
     HelloComponent,
     StudentsTableComponent,
-    StudentFormComponent
+    MatSliderModule,
+    StudentFormComponent,
+    SideNavBarComponent
   ],
   bootstrap: [AppComponent]
 })
