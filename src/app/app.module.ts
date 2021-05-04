@@ -7,6 +7,7 @@ import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
 import { StudentsTableComponent } from "./students-table/students-table.component";
 import { StudentFormComponent } from "./student-form/student-form.component";
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
@@ -14,7 +15,8 @@ import { StudentFormComponent } from "./student-form/student-form.component";
     AppComponent,
     HelloComponent,
     StudentsTableComponent,
-    StudentFormComponent
+    StudentFormComponent,
+    NavigationBarComponent
   ],
   bootstrap: [AppComponent]
 })
